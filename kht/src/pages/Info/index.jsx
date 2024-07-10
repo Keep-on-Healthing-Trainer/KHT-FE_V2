@@ -5,7 +5,7 @@ import { styled } from "styled-components";
 function InfoPage() {
 
   return (
-    <>Info</>
+    <></>
   );
 }
 
