@@ -26,6 +26,7 @@ export const Text = styled.div`
   font-weight: 500;
   color: ${color.Black};
   margin-bottom: 10px;
+  user-select: none;
 `;
 
 export const DataInput = styled.input`

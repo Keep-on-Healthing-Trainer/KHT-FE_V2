@@ -44,18 +44,21 @@ export const Font = styled.div`
   font-size: 50px;
   font-weight: bold;
   color: ${color.Black};
+  user-select: none;
 `
 
 export const SmallFont = styled.div`
   font-size: 20px;
   font-weight: 500;
   color: ${color.Gray[4]};
+  user-select: none;
 `
 
 export const TopFont = styled.div`
   font-size: 20px;
   font-weight: 700;
   color: ${color.Blue[10]};
+  user-select: none;
 `
 
 export const Button = styled.button`

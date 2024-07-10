@@ -41,6 +41,7 @@ export const Text = styled.div`
   color: ${color.Black};
   font-size: 18px;
   font-weight: lighter;
+  user-select: none;
 `;
 
 export const Ranking = styled.div`
@@ -49,6 +50,7 @@ export const Ranking = styled.div`
   color: ${color.Black};
   font-size: 18px;
   font-weight: lighter;
+  user-select: none;
 `;
 
 export const Profile = styled.div`

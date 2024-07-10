@@ -64,12 +64,14 @@ export const TextLable = styled.div`
   font-size: 16px;
   font-weight: lighter;
   color: ${color.Black};
+  user-select: none;
 `
 
 export const Text = styled.div`
   font-size: 16px;
   font-weight: lighter;
   color: ${color.Gray[5]};
+  user-select: none;
 `
 
 export const TextDiv = styled.div`

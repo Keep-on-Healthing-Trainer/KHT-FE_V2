@@ -15,6 +15,7 @@ export const Text = styled.div`
   font-size: 36px;
   font-weight: bold;
   color: ${color.Blue[8]};
+  user-select: none;
 `;
 
 export default State;
