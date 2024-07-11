@@ -7,7 +7,7 @@ import { color } from "../../styles/theme";
 const Rank = (props) => {
 
   return (
-    <Container background={props.rank == 1 ? color.Gold : (props.rank == 2 ? color.Silver : (props.rank == 3 ? color.Copper : color.White))}>
+    <Container background={props.rank == 1 ? color.Gold : (props.rank == 2 ? color.Silver : (props.rank == 3 ? color.Copper : color.White))} onClick={props.onClick}>
       <Ranking>{props.rank}</Ranking>
       <Profile></Profile>
       <TextDiv>
