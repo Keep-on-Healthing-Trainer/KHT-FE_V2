@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { color } from "../../../styles/theme";
+import { breakpoints } from "../../../styles/device";
 
 export const Main = styled.main`
   width: 100%;
@@ -23,14 +24,24 @@ export const RankDiv = styled.div`
 `
 
 export const Select = styled.div`
-  width: 60vw;
+  width: 1000px;
   border-bottom: solid 2px ${color.Gray[3]};
   gap: 1vw;
   display: flex;
+
+  @media only screen and (max-width: ${breakpoints.large}) {
+    width: 800px;
+  }
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 650px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 600px;
+  }
 `
 
 export const Btn = styled.button`
-  width: 6vw;
+  width: 120px;
   height: 5vh;
   background-color: ${color.White};
   border: none;
@@ -44,7 +55,7 @@ export const Btn = styled.button`
 `
 
 export const FocusBtn = styled.button`
-  width: 6vw;
+  width: 120px;
   height: 5vh;
   background-color: ${color.White};
   border: none;
