@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { color } from "../../../styles/theme";
+import { breakpoints } from "../../../styles/device";
 
 export const Main = styled.main`
   width: 100%;
@@ -22,8 +23,8 @@ export const MainWhite = styled.article`
   justify-content: center;
 `;
 
-export const Left = styled.div`
-  width: 30%;
+export const Text = styled.div`
+  width: 450px;
   height: 94vh;
   display: flex;
   flex-direction: column;
@@ -31,13 +32,20 @@ export const Left = styled.div`
   row-gap: 3vh;
 `
 
-export const Right = styled.div`
-  width: 30%;
+export const Img = styled.div`
+  width: 450px;
   height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   row-gap: 3vh;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 200px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 50px;
+  }
 `
 
 export const Font = styled.div`
@@ -62,7 +70,7 @@ export const TopFont = styled.div`
 `
 
 export const Button = styled.button`
-  width: 15vw;
+  width: 300px;
   height: 7vh;
   background-color: ${color.Blue[8]};
   color: ${color.White};
