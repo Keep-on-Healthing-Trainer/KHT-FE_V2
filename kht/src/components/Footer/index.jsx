@@ -9,6 +9,13 @@ import AppStore from "../../assets/icon/AppStore";
 import PlayStore from "../../assets/icon/PlayStore";
 
 const Footer = () => {
+  const onClickApple = () => {
+    window.open("https://www.apple.com/kr/app-store/");
+  };
+
+  const onClickGoogle = () => {
+    window.open("https://play.google.com/store/games?hl=ko");
+  };
 
   return (
     <FooterBackground>
@@ -28,11 +35,11 @@ const Footer = () => {
       <Div>
         <TextLable>KHT 앱 다운로드</TextLable>
         <TextContainer>
-          <Button>
+          <Button onClick={onClickApple}>
             <AppStore />
             <ButtonText>App Store</ButtonText>
           </Button>
-          <Button>
+          <Button onClick={onClickGoogle}>
             <PlayStore />
             <ButtonText>Google Play</ButtonText>
           </Button>
