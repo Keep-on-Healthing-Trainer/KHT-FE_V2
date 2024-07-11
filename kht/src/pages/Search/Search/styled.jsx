@@ -16,5 +16,5 @@ export const Center = styled.article`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 10vh;
+  row-gap: 100px;
 `
