@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import * as S from "./styled";
-import { color } from "../../../styles/theme";
 
 import Rank from "../../../components/Rank";
 import State from "../../../components/State";
@@ -64,7 +63,11 @@ function LoginAfterPage() {
           "profileImgUrl": "https://khtback.s3.ap-northeast-2.amazonaws.com/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%91%E1%85%B5%E1%86%AF%E1%84%89%E1%85%A1%E1%84%8C%E1%85%B5%E1%86%AB.svg"
         },
     ]
-}
+  }
+
+  const onClickRanking = () => {
+    window.location.assign("/info");
+  }
 
   return (
     <>
@@ -91,7 +94,7 @@ function LoginAfterPage() {
           <S.RankDiv>
             {data.RankingResponse.map((item , index) => {
                 return(
-                  <Rank rank={index+1} name={item.userName} count={item.totalCounts} />
+                  <Rank key={index} rank={index+1} name={item.userName} count={item.totalCounts} onClick={() => onClickRanking()} />
                 );
               }
             )}
