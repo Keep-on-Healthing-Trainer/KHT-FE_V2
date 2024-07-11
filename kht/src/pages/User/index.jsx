@@ -8,6 +8,9 @@ import State from "../../components/State";
 import Button from "../../components/Button";
 
 function SignupPage() {
+  const onClickSignupButton = () => {
+    window.location.assign("/login");
+  }
 
   return (
     <>
@@ -21,7 +24,7 @@ function SignupPage() {
             <Input innerText="비밀번호" state="password" />
             <Input innerText="비밀번호 확인" state="password" />
           </S.InputDiv>
-          <Button innerText="회원가입" />
+          <Button innerText="회원가입" onClick={onClickSignupButton} />
         </S.Center>
       </S.Main>
     </>
