@@ -6,6 +6,9 @@ import * as S from "./styled";
 import Footer from "../../../components/Footer";
 
 function LoginBeforePage() {
+  const onKHT = () => {
+    window.location.assign("/login");
+  }
 
   return (
     <>
@@ -17,7 +20,7 @@ function LoginBeforePage() {
               <S.Font>라이프스타일</S.Font>
             </div>
             <S.SmallFont>지금 시작하는 건강한 하루, KHT와 함께해요.</S.SmallFont>
-            <S.Button>KHT 시작하기</S.Button>
+            <S.Button onClick={onKHT}>KHT 시작하기</S.Button>
           </S.Text>
           <S.Img>
 
