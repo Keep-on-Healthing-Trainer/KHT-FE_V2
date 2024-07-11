@@ -37,7 +37,7 @@ export const Text = styled.div`
 `;
 
 export const DataInput = styled.input`
-  width: 750px;
+  width: 730px;
   height: 6vh;
   background-color: ${color.Gray[1]};
   border-radius: 10px;
@@ -53,10 +53,10 @@ export const DataInput = styled.input`
   }
 
   @media only screen and (max-width: ${breakpoints.medium}) {
-    width: 650px;
+    width: 630px;
   }
   @media only screen and (max-width: ${breakpoints.small}) {
-    width: 550px;
+    width: 530px;
   }
 `;
 
