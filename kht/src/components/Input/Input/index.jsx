@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
-
+import { breakpoints } from "../../../styles/device";
 import { color } from "../../../styles/theme";
 
 const Input = (props) => {
@@ -15,10 +15,17 @@ const Input = (props) => {
 }
 
 export const Container = styled.div`
-  width: 41vw;
+  width: 750px;
   height: 10vh;
   display: flex;
   flex-direction: column;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 650px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 550px;
+  }
 `;
 
 export const Text = styled.div`
@@ -30,7 +37,7 @@ export const Text = styled.div`
 `;
 
 export const DataInput = styled.input`
-  width: 40vw;
+  width: 750px;
   height: 6vh;
   background-color: ${color.Gray[1]};
   border-radius: 10px;
@@ -43,6 +50,13 @@ export const DataInput = styled.input`
   &:focus {
     border: none;
     outline: none;
+  }
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 650px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 550px;
   }
 `;
 
