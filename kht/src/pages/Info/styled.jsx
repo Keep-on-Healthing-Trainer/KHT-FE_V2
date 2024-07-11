@@ -57,7 +57,6 @@ export const RightDiv = styled.div`
 export const Ranking = styled.article`
   width: 800px;
   height: 200px;
-  background-color: red;
 
   @media only screen and (max-width: ${breakpoints.medium}) {
     width: 600px;
@@ -87,8 +86,6 @@ export const Select = styled.div`
   align-items: center;
   justify-content: center;
   row-gap: 1vh;
-  
-  background-color: blue;
 
   @media only screen and (max-width: ${breakpoints.medium}) {
     width: 200px;
@@ -107,7 +104,6 @@ export const SelectDiv = styled.div`
 export const Grape = styled.article`
   width: 800px;
   height: 400px;
-  background-color: red;
 
   @media only screen and (max-width: ${breakpoints.medium}) {
     width: 600px;
