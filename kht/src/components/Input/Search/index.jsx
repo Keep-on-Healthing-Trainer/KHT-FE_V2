@@ -24,6 +24,9 @@ export const Container = styled.div`
   border: solid 1px ${color.Blue[10]};
   border-radius: 50px;
 
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 650px;
+  }
   @media only screen and (max-width: ${breakpoints.small}) {
     width: 550px;
   }
@@ -44,6 +47,9 @@ export const DataInput = styled.input`
     outline: none;
   }
 
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 550px;
+  }
   @media only screen and (max-width: ${breakpoints.small}) {
     width: 450px;
   }
