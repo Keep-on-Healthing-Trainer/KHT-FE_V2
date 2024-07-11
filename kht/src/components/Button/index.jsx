@@ -7,7 +7,7 @@ import { color } from "../../styles/theme";
 const Button = (props) => {
 
   return (
-    <Btn>{props.innerText}</Btn>
+    <Btn onClick={props.onClick}>{props.innerText}</Btn>
   );
 }
 
