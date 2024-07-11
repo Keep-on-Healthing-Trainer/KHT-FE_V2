@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
-
+import { breakpoints } from "../../styles/device";
 import { color } from "../../styles/theme";
 
 import FooterLogo from "../../assets/icon/FooterLogo";
@@ -47,12 +47,15 @@ export const FooterBackground = styled.footer`
   height: 20vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 20vw;
+  justify-content: space-around;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 700px;
+  }
 `;
 
 export const Div = styled.div`
-  width: 20vw;
+  width: 400px;
   height: 20vh;
   display: flex;
   flex-direction: column;
@@ -87,7 +90,7 @@ export const TextContainer = styled.div`
 
 export const Button = styled.button`
   background-color: ${color.Blue[8]};
-  width: 8vw;
+  width: 150px;
   height: 4vh;
   border: none;
   border-radius: 10px;

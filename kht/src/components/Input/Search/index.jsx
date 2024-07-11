@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
-
+import { breakpoints } from "../../../styles/device";
 import { color } from "../../../styles/theme";
 import SearchIcon from "../../../assets/icon/SearchIcon";
 
@@ -16,17 +16,21 @@ const SearchInput = (props) => {
 }
 
 export const Container = styled.div`
-  width: 42vw;
+  width: 750px;
   height: 6.5vh;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border: solid 1px ${color.Blue[10]};
   border-radius: 50px;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 550px;
+  }
 `;
 
 export const DataInput = styled.input`
-  width: 35vw;
+  width: 650px;
   height: 6vh;
   border: none;
   border-radius: 50px;
@@ -38,6 +42,10 @@ export const DataInput = styled.input`
   &:focus {
     border: none;
     outline: none;
+  }
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 450px;
   }
 `;
 

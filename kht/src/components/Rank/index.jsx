@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { styled } from "styled-components";
-
+import { breakpoints } from "../../styles/device";
 import { color } from "../../styles/theme";
 
 const Rank = (props) => {
@@ -21,22 +21,41 @@ const Rank = (props) => {
 }
 
 export const Container = styled.div`
-  width: 60vw;
+  width: 1000px;
   height: 6.5vh;
   border-radius: 10px;
   display: flex;
   align-items: center;
   background: ${props => props.background};
+  
+  @media only screen and (max-width: ${breakpoints.large}) {
+    width: 800px;
+  }
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 650px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 600px;
+  }
 `;
 
 export const TextDiv = styled.div`
-  width: 12vw;
+  width: 230px;
   display: flex;
   justify-content: flex-end;
+
+  @media only screen and (max-width: ${breakpoints.large}) {
+    width: 210px;
+  }
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 190px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 170px;
+  }
 `;
 
 export const Text = styled.div`
-  width: 10vw;
   text-align: right;
   color: ${color.Black};
   font-size: 18px;
@@ -45,12 +64,22 @@ export const Text = styled.div`
 `;
 
 export const Ranking = styled.div`
-  width: 5vw;
+  width: 100px;
   text-align: right;
   color: ${color.Black};
   font-size: 18px;
   font-weight: lighter;
   user-select: none;
+
+  @media only screen and (max-width: ${breakpoints.large}) {
+    width: 80px;
+  }
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 70px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 50px;
+  }
 `;
 
 export const Profile = styled.div`
