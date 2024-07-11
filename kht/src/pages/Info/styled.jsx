@@ -1,22 +1,32 @@
 import { styled } from "styled-components";
 import { color } from "../../styles/theme";
+import { breakpoints } from "../../styles/device";
 
 export const Main = styled.main`
   width: 100%;
   height: 94vh;
-  gap: 2vw;
+  gap: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const Profile = styled.article`
-  width: 15vw;
+  width: 150px;
   height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 1vh;
+  row-gap: 15px;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 120px;
+    row-gap: 0px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 100px;
+    row-gap: 0px;
+  }
 `
 
 export const ProfileImg = styled.div`
@@ -41,13 +51,20 @@ export const Text = styled.div`
 export const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
-  row-gap: 5vh;
+  row-gap: 50px;
 `
 
 export const Ranking = styled.article`
-  width: 50vw;
-  height: 25vh;
-  row-gap: 10vh;
+  width: 800px;
+  height: 200px;
+  background-color: red;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 600px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 500px;
+  }
 `
 
 export const Label = styled.div`
@@ -63,13 +80,22 @@ export const Count = styled.div`
 `
 
 export const Select = styled.div`
-  width: 15vw;
-  height: 10vh;
+  width: 250px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   row-gap: 1vh;
+  
+  background-color: blue;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 200px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 180px;
+  }
 `
 
 export const SelectDiv = styled.div`
@@ -79,6 +105,14 @@ export const SelectDiv = styled.div`
 `
 
 export const Grape = styled.article`
-  width: 50vw;
-  height: 40vh;
+  width: 800px;
+  height: 400px;
+  background-color: red;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 600px;
+  }
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 500px;
+  }
 `
