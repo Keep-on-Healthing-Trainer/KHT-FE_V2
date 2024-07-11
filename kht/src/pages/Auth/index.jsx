@@ -8,6 +8,9 @@ import State from "../../components/State";
 import Button from "../../components/Button";
 
 function LoginPage() {
+  const onClickLoginButton = () => {
+    window.location.assign("/main");
+  }
 
   return (
     <>
@@ -18,7 +21,7 @@ function LoginPage() {
             <Input innerText="아이디" state="text" />
             <Input innerText="비밀번호" state="password" />
           </S.InputDiv>
-          <Button innerText="로그인" />
+          <Button innerText="로그인" onClick={onClickLoginButton} />
         </S.Center>
       </S.Main>
     </>
