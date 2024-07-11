@@ -7,12 +7,21 @@ import { color } from "../../../styles/theme";
 import Logo from "../../../assets/icon/Logo";
 
 const AfterHeader = () => {
+  const onClickSearch = () => {
+    window.location.assign("/search");
+  };
+
+  const onClickHome = () => {
+    window.location.assign("/main");
+  };
 
   return (
     <HeaderBackground>
-      <Logo />
+      <div onClick={onClickHome}>
+        <Logo/>
+      </div>
       <Div>
-        <Button>검색하기</Button>
+        <Button onClick={onClickSearch}>검색하기</Button>
       </Div>
     </HeaderBackground>
   );
