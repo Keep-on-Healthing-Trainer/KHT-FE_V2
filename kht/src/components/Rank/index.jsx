@@ -7,7 +7,7 @@ import { color } from "../../styles/theme";
 const Rank = (props) => {
 
   return (
-    <Container background={props.rank == 1 ? color.Gold : (props.rank == 2 ? color.Silver : (props.rank == 3 ? color.Copper : color.White))} onClick={props.onClick}>
+    <Container border={props.rank == 1 ? color.Gold : (props.rank == 2 ? color.Silver : (props.rank == 3 ? color.Copper : color.White))} onClick={props.onClick}>
       <Ranking>{props.rank}</Ranking>
       <Profile></Profile>
       <TextDiv>
@@ -26,7 +26,7 @@ export const Container = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
-  background: ${props => props.background};
+  border: solid 1px ${props => props.border};
   
   @media only screen and (max-width: ${breakpoints.large}) {
     width: 800px;
