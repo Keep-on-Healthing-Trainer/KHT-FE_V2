@@ -7,6 +7,10 @@ export const Main = styled.main`
   height: 94vh;
   display: flex;
   justify-content: center;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 700px;
+  }
 `;
 
 export const Center = styled.article`
@@ -25,7 +29,7 @@ export const RankDiv = styled.div`
 
 export const Select = styled.div`
   width: 1000px;
-  border-bottom: solid 2px ${color.Gray[3]};
+  border-bottom: solid 2px ${color.Gray[2]};
   gap: 1vw;
   display: flex;
 
