@@ -5,6 +5,10 @@ import { breakpoints } from "../../../styles/device";
 export const Main = styled.main`
   width: 100%;
   padding-top: 6vh;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 700px;
+  }
 `;
 
 export const MainBlue = styled.article`
@@ -13,6 +17,16 @@ export const MainBlue = styled.article`
   background-color: ${color.Blue[0]};
   display: flex;
   justify-content: center;
+  gap: 90px;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    flex-direction: column;
+    align-items: center;
+    height: 150vh;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    height: 120vh;
+  }
 `;
 
 export const MainWhite = styled.article`
@@ -21,38 +35,49 @@ export const MainWhite = styled.article`
   background-color: ${color.White};
   display: flex;
   justify-content: center;
+  gap: 90px;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 150vh;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    height: 120vh;
+  }
 `;
 
 export const TextDiv = styled.div`
-  width: 500px;
   height: 94vh;
   display: flex;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    height: 70vh;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    height: 50vh;
+  }
 `
 
 export const Text = styled.div`
-  width: 450px;
   height: 94vh;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: center;
-  row-gap: 3vh;
+  row-gap: 50px;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    height: 70vh;
+  }
 `
 
 export const Img = styled.div`
-  width: 700px;
   height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
-  row-gap: 3vh;
-
-  @media only screen and (max-width: ${breakpoints.medium}) {
-    width: 200px;
-  }
-  @media only screen and (max-width: ${breakpoints.small}) {
-    width: 50px;
-  }
+  align-items: flex-start;
 `
 
 export const Font = styled.div`
@@ -77,7 +102,7 @@ export const TopFont = styled.div`
 `
 
 export const Button = styled.button`
-  width: 300px;
+  width: 270px;
   height: 7vh;
   background-color: ${color.Blue[8]};
   color: ${color.White};
@@ -88,5 +113,21 @@ export const Button = styled.button`
 
   &:hover {
     cursor: pointer;
+  }
+`
+
+export const BigImg = styled.img`
+  width: 600px;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 500px;
+  }
+`
+
+export const SmallImg = styled.img`
+  width: 450px;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 350px;
   }
 `

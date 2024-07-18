@@ -30,12 +30,12 @@ function LoginBeforePage() {
             </S.Text>
           </S.TextDiv>
           <S.Img>
-            <img src={LoadingImg} width="450"/> 
+            <S.SmallImg src={LoadingImg} width="450"/> 
           </S.Img>
         </S.MainBlue>
         <S.MainWhite>
           <S.Img>
-            <img src={MypageImg} width="650"/>
+            <S.BigImg src={MypageImg} width="650"/>
           </S.Img>
             <S.TextDiv>
             <S.Text>
@@ -60,12 +60,12 @@ function LoginBeforePage() {
             </S.Text>
           </S.TextDiv>
           <S.Img>
-            <img src={RankingImg} width="450"/>
+            <S.SmallImg src={RankingImg} width="450"/>
           </S.Img>
         </S.MainBlue>
         <S.MainWhite>
           <S.Img>
-            <img src={CommunityImg} width="650"/>
+            <S.BigImg src={CommunityImg} width="650"/>
           </S.Img>
           <S.TextDiv>
             <S.Text>
@@ -90,7 +90,7 @@ function LoginBeforePage() {
             </S.Text>
           </S.TextDiv>
           <S.Img>
-            <img src={SearchImg} width="650"/>
+            <S.BigImg src={SearchImg} width="650"/>
           </S.Img>
         </S.MainBlue>
       </S.Main>
