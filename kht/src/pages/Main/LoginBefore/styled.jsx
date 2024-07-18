@@ -23,6 +23,12 @@ export const MainWhite = styled.article`
   justify-content: center;
 `;
 
+export const TextDiv = styled.div`
+  width: 500px;
+  height: 94vh;
+  display: flex;
+`
+
 export const Text = styled.div`
   width: 450px;
   height: 94vh;
@@ -33,11 +39,12 @@ export const Text = styled.div`
 `
 
 export const Img = styled.div`
-  width: 450px;
+  width: 700px;
   height: 94vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
   row-gap: 3vh;
 
   @media only screen and (max-width: ${breakpoints.medium}) {
