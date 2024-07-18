@@ -5,64 +5,48 @@ import { breakpoints } from "../../../styles/device";
 export const Main = styled.main`
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   row-gap: 30px;
-  padding: 150px 0px 0px 0px;
+  padding: 70px 0px;
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 700px;
+  }
 `;
-
-export const Select = styled.div`
-  width: 1000px;
-  border-bottom: solid 2px ${color.Gray[2]};
-  gap: 1vw;
-  display: flex;
-`
-
-export const Btn = styled.button`
-  width: 70px;
-  height: 5vh;
-  background-color: ${color.White};
-  border: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: ${color.Gray[4]};
-  &:hover {
-    cursor: pointer;
-  }
-`
-
-export const FocusBtn = styled.button`
-  width: 70px;
-  height: 5vh;
-  background-color: ${color.White};
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 2px 0 ${color.Blue[8]};
-  color: ${color.Black};
-  &:hover {
-    cursor: pointer;
-  }
-`
 
 export const Container = styled.div`
   width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and (max-width: ${breakpoints.medium}) {
+    width: 750px;
+  }
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 600px;
+  }
 `
 
 export const Column = styled.div`
-  width: 1000px;
+  width: 800px;
   display: flex;
   border-bottom: solid 1px ${color.Gray[2]};
-  padding: 20px 0px;
+  padding: 20px 100px;
   gap: 30px;
+
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 600px;
+  }
 `
 
 export const Img = styled.div`
   width: 100px;
-  height: 110px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: ${color.Gray[2]};
 `
 
 export const TextDiv = styled.div`
@@ -89,7 +73,37 @@ export const Shadow = styled.div`
   width: 100%;
   height: 300px;
   bottom: 0px;
-
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, ${color.White} 100%);
+  @media only screen and (max-width: ${breakpoints.small}) {
+    width: 700px;
+  }
+`
 
+export const NoDataText = styled.div`
+  font-size: 34px;
+  font-weight: bold;
+  color: ${color.Gray[4]};
+`
+
+export const Btn = styled.button`
+  width: 280px;
+  height: 60px;
+  background-color: ${color.Blue[8]};
+  border: none;
+  color: ${color.White};
+  font-size: 18px;
+  border-radius: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
+export const NoDataDiv = styled.div`
+  height: 60vh;
+  row-gap: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
