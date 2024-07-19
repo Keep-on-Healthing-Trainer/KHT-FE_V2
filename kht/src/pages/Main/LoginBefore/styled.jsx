@@ -59,39 +59,12 @@ export const TextDiv = styled.div`
   }
 `
 
-export const Text = styled.div`
-  height: 94vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  row-gap: 50px;
-
-  @media only screen and (max-width: ${breakpoints.medium}) {
-    height: 70vh;
-  }
-`
-
 export const Img = styled.div`
   height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-`
-
-export const Font = styled.div`
-  font-size: 50px;
-  font-weight: bold;
-  color: ${color.Black};
-  user-select: none;
-`
-
-export const SmallFont = styled.div`
-  font-size: 20px;
-  font-weight: 500;
-  color: ${color.Gray[4]};
-  user-select: none;
 `
 
 export const TopFont = styled.div`
