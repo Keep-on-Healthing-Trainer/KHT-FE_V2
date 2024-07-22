@@ -13,14 +13,6 @@ export const Main = styled.main`
   }
 `;
 
-export const InputDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 3vh;
-`;
-
 export const Center = styled.article`
   display: flex;
   flex-direction: column;
