@@ -3,9 +3,11 @@ import axios from "axios";
 
 import * as S from "./styled";
 
-import Rank from "../../../components/Rank";
 import State from "../../../components/State";
 import Footer from "../../../components/Footer";
+
+import RankingComponents from "./components/Ranking";
+import SelectComponents from "./components/Select";
 
 function LoginAfterPage() {
   const [ selectData, setSelectData] = useState("1");
@@ -74,31 +76,13 @@ function LoginAfterPage() {
       <S.Main>
         <S.Center>
           <State innerText="RANKING" />
-          <S.Select>
-            {selectData == "1" ? (
-              <S.FocusBtn onClick={() => setSelectData("1")}>윗몸일으키기</S.FocusBtn>
-            ) : (
-              <S.Btn onClick={() => setSelectData("1")}>윗몸일으키기</S.Btn>
-            )}
-            {selectData == "2" ? (
-              <S.FocusBtn onClick={() => setSelectData("2")}>스쿼트</S.FocusBtn>
-            ) : (
-              <S.Btn onClick={() => setSelectData("2")}>스쿼트</S.Btn>
-            )}
-            {selectData == "3" ? (
-              <S.FocusBtn onClick={() => setSelectData("3")}>팔굽혀펴기</S.FocusBtn>
-            ) : (
-              <S.Btn onClick={() => setSelectData("3")}>팔굽혀펴기</S.Btn>
-            )}
-          </S.Select>
-          <S.RankDiv>
-            {data.RankingResponse.map((item , index) => {
-                return(
-                  <Rank key={index} rank={index+1} name={item.userName} count={item.totalCounts} onClick={() => onClickRanking()} />
-                );
-              }
-            )}
-          </S.RankDiv>
+          <SelectComponents
+          data={selectData}
+          onPressOne={() => setSelectData("1")}
+          onPressTwo={() => setSelectData("2")}
+          onPressThr={() => setSelectData("3")}
+          />
+          <RankingComponents data={data.RankingResponse} onPress={() => onClickRanking()}/>
         </S.Center>
       </S.Main>
       <Footer></Footer>
