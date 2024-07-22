@@ -3,9 +3,10 @@ import axios from "axios";
 
 import * as S from "./styled";
 
-import Input from "../../components/Input/Input";
 import State from "../../components/State";
 import Button from "../../components/Button";
+
+import InputComponents from "./components/Input";
 
 function LoginPage() {
   const onClickLoginButton = () => {
@@ -17,10 +18,7 @@ function LoginPage() {
       <S.Main>
         <S.Center>
           <State innerText="LOGIN" />
-          <S.InputDiv>
-            <Input innerText="아이디" state="text" />
-            <Input innerText="비밀번호" state="password" />
-          </S.InputDiv>
+          <InputComponents />
           <Button innerText="로그인" onClick={onClickLoginButton} />
         </S.Center>
       </S.Main>
