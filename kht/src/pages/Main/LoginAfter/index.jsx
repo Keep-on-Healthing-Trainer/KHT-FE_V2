@@ -8,6 +8,7 @@ import Footer from "../../../components/Footer";
 
 import RankingComponents from "./components/Ranking";
 import SelectComponents from "./components/Select";
+import PageComponents from "./components/Page";
 
 function LoginAfterPage() {
   const [ selectData, setSelectData] = useState("1");
@@ -84,6 +85,7 @@ function LoginAfterPage() {
           />
           <RankingComponents data={data.RankingResponse} onPress={() => onClickRanking()}/>
         </S.Center>
+        <PageComponents pages="1" />
       </S.Main>
       <Footer></Footer>
     </>
