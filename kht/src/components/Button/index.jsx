@@ -12,7 +12,7 @@ const Button = (props) => {
 }
 
 export const Btn = styled.button`
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
   color: ${color.White};
   background-color: ${color.Blue[8]};
