@@ -9,6 +9,7 @@ import DataComponents from "./components/Data";
 
 function ResultPage() {
   const [isData, setIsData] = useState(false);
+  const [searchData, setSearchData] = useState();
 
   const onClickButton = () => {
     window.location.assign("/main");
@@ -21,7 +22,7 @@ function ResultPage() {
   return (
     <S.Main>
       <S.Shadow></S.Shadow>
-      <Search />
+      <Search onGetInText={(text) => setSearchData(text)} />
       {isData ? (
         <S.Container>
           <DataComponents onPress={() => onClickData()} />

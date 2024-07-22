@@ -6,10 +6,23 @@ import { color } from "../../../styles/theme";
 import SearchIcon from "../../../assets/icon/SearchIcon";
 
 const SearchInput = (props) => {
+  const [value, setValue] = useState();
+
+  const onChangeData = (e) => {
+    setValue(e.target.value);
+  }
+
+  useEffect(() => {
+    props.onGetInText(value);
+  }, [value]);
 
   return (
     <Container>
-        <DataInput type={props.state} maxLength={15} placeholder="찾고싶은 유저를 입력하세요"/>
+        <DataInput
+        type="text"
+        placeholder="찾고싶은 유저를 입력하세요"
+        onChange={onChangeData}
+        />
         <SearchIcon />
     </Container>
   );
