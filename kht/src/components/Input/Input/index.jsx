@@ -5,11 +5,20 @@ import { breakpoints } from "../../../styles/device";
 import { color } from "../../../styles/theme";
 
 const Input = (props) => {
+  const [value, setValue] = useState();
+
+  const onChangeData = (e) => {
+    setValue(e.target.value);
+  }
+
+  useEffect(() => {
+    props.onGetInText(value);
+  }, [value]);
 
   return (
     <Container>
         <Text>{props.innerText}</Text>
-        <DataInput type={props.state} maxLength={15} />
+        <DataInput type={props.state} onChange={onChangeData}/>
     </Container>
   );
 }

@@ -4,11 +4,34 @@ import { styled } from "styled-components";
 import Input from "../../../../components/Input/Input";
 
 const InputComponents = ( props ) => {
+  const [loginData, setLoginData] = useState({
+    name: "",
+    password: "",
+  });
+
+  useEffect(() => {
+    console.log(loginData);
+  }, [loginData]);
+
+  const handleInputChange = (text, field) => {
+    setLoginData(prevData => ({
+      ...prevData,
+      [field]: text
+    }));
+  }
 
   return (
     <InputDiv>
-        <Input innerText="아이디" state="text" />
-        <Input innerText="비밀번호" state="password" />
+        <Input
+        innerText="아이디"
+        state="text"
+        onGetInText={(text) => handleInputChange(text, "name")}
+        />
+        <Input
+        innerText="비밀번호"
+        state="password"
+        onGetInText={(text) => handleInputChange(text, "password")}
+        />
     </InputDiv>
   );
 }
