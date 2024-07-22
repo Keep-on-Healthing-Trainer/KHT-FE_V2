@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Search from "../../../components/Input/Search";
-import NoDataIcon from "../../../assets/icon/NoDataIcon";
 import * as S from "./styled";
+
+import NoDataComponents from "./components/NoData";
+import DataComponents from "./components/Data";
 
 function ResultPage() {
   const [isData, setIsData] = useState(false);
@@ -12,68 +14,21 @@ function ResultPage() {
     window.location.assign("/main");
   }
 
+  const onClickData = () => {
+    window.location.assign("/info");
+  }
+
   return (
     <S.Main>
       <S.Shadow></S.Shadow>
       <Search />
       {isData ? (
-              <S.Container>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-              <S.Column>
-                <S.Img></S.Img>
-                <S.TextDiv>
-                  <S.BoldText>유저 이름</S.BoldText>
-                  <S.Text>아이디</S.Text>
-                  <S.Text>전화번호</S.Text>
-                </S.TextDiv>
-              </S.Column>
-            </S.Container>
+        <S.Container>
+          <DataComponents onPress={() => onClickData()} />
+        </S.Container>
       ) : (
         <S.Container>
-          <S.NoDataDiv>
-            <NoDataIcon />
-            <S.NoDataText>유저를 찾을 수 없습니다.</S.NoDataText>
-            <S.Btn onClick={() => onClickButton()}>메인 페이지로 돌아가기</S.Btn>
-          </S.NoDataDiv>
+          <NoDataComponents onPress={() => onClickButton()}/>
         </S.Container>
       )}
     </S.Main>
