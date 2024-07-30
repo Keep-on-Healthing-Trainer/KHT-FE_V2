@@ -11,33 +11,25 @@ const PageComponents = ( props ) => {
 
   return (
     <Container>
-      {props.pages == "1" ? (
-          <Textdiv>
-            <NoColorPrevious />
-            <NoColorText>Previous</NoColorText>
-          </Textdiv>
-      ) : (
-          <Textdiv>
-            <ColorPrevious />
-            <ColorText>Previous</ColorText>
-          </Textdiv>
-      )}
       <Textdiv>
-        <Count>{props.pages}</Count>
+        {props.pages == "1" ? (
+          <NoColorText>Previous</NoColorText>
+        ) : (
+          <ColorText>Previous</ColorText>
+        )}
+      </Textdiv>
+      <Textdiv>
+        <NoColorText>{props.pages}</NoColorText>
         <NoColorText>of</NoColorText>
         <NoColorText>20</NoColorText>
       </Textdiv>
+      <Textdiv>
       {props.pages == "20" ? (
-        <Textdiv>
-          <NoColorText>Next</NoColorText>
-          <NoColorNext />
-        </Textdiv>
+        <NoColorText>Next</NoColorText>
       ) : (
-        <Textdiv>
-          <ColorText>Next</ColorText>
-          <ColorNext />
-        </Textdiv>
+        <ColorText>Next</ColorText>
       )}
+      </Textdiv>
     </Container>
   );
 }
@@ -59,25 +51,16 @@ export const ColorText = styled.div`
   font-weight: 600;
   color: ${color.Blue[10]};
   user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 `
 
 export const NoColorText = styled.div`
   font-size: 16px;
   font-weight: 600;
   color: ${color.Gray[4]};
-  user-select: none;
-`
-
-export const Count = styled.div`
-  width: 55px;
-  height: 45px;
-  border: solid 1.5px ${color.Gray[4]};
-  border-radius: 3px;
-  font-size: 16px;
-  color: ${color.Gray[5]};
-  display: flex;
-  align-items: center;
-  justify-content: center;
   user-select: none;
 `
 

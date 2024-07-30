@@ -15,7 +15,7 @@ export const Main = styled.main`
 `;
 
 export const Center = styled.article`
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
