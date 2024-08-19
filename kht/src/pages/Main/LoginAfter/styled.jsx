@@ -3,7 +3,6 @@ import { breakpoints } from "../../../styles/device";
 
 export const Main = styled.main`
   width: 100%;
-  height: 120vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,9 +14,9 @@ export const Main = styled.main`
 `;
 
 export const Center = styled.article`
-  height: 110vh;
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  row-gap: 3vh;
+  row-gap: 5vh;
 `
