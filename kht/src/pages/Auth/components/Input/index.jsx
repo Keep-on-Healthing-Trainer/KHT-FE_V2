@@ -5,9 +5,13 @@ import Input from "../../../../components/Input/Input";
 
 const InputComponents = ( props ) => {
   const [loginData, setLoginData] = useState({
-    id: "",
+    userId: "",
     password: "",
   });
+
+  useEffect(() => {
+    props.onGetInText(loginData);
+  }, [loginData]);
 
   const handleInputChange = (text, field) => {
     setLoginData(prevData => ({
@@ -21,7 +25,7 @@ const InputComponents = ( props ) => {
         <Input
         innerText="아이디"
         state="text"
-        onGetInText={(text) => handleInputChange(text, "id")}
+        onGetInText={(text) => handleInputChange(text, "userId")}
         />
         <Input
         innerText="비밀번호"
