@@ -1,13 +1,25 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 
 import * as S from "./styled";
 
 import State from "../../../components/State";
 import SearchInput from "../../../components/Input/Search";
 
+import onSearch from "../../../apis/Search";
+
 function SearchPage() {
-  const [searchData, setSearchData] = useState();
+  const [ searchData, setSearchData ] = useState();
+
+  useEffect(() => {
+    getSearch();
+  }, []);
+
+  const getSearch = async () => {
+    const res = await onSearch(searchData);
+    if(res) {
+      window.location.assign("/result");
+    }
+  }
 
   return (
     <>
