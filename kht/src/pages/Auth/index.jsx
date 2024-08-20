@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import * as S from "./styled";
@@ -10,6 +11,7 @@ import InputComponents from "./components/Input";
 import onLogin from "../../apis/Login";
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [loginData, setLoginData] = useState();
 
   const onClickLoginButton = async () => {
@@ -18,7 +20,7 @@ function LoginPage() {
         const loginState = await onLogin(loginData);
         
         if (loginState) {
-          window.location.assign("/main");
+          navigate('/main');
         }
       } catch (error) {
         console.log("로그인 오류");
