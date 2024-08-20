@@ -6,11 +6,15 @@ import Input from "../../../../components/Input/Input";
 const InputComponents = ( props ) => {
   const [signupData, setSignupData] = useState({
     name: "",
-    number: "",
-    id: "",
+    phoneNumber: "",
+    userId: "",
     password: "",
     passwordCheck: "",
   });
+
+  useEffect(() => {
+    props.onGetInText(signupData);
+  }, [signupData]);
 
   const handleInputChange = (text, field) => {
     setSignupData(prevData => ({
@@ -29,12 +33,12 @@ const InputComponents = ( props ) => {
         <Input
         innerText="전화번호"
         state="text" 
-        onGetInText={(text) => handleInputChange(text, "number")}
+        onGetInText={(text) => handleInputChange(text, "phoneNumber")}
         />
         <Input
         innerText="아이디"
         state="text" 
-        onGetInText={(text) => handleInputChange(text, "id")}
+        onGetInText={(text) => handleInputChange(text, "userId")}
         />
         <Input
         innerText="비밀번호"
