@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import * as S from "./styled";
 
@@ -8,16 +9,15 @@ import SearchInput from "../../../components/Input/Search";
 import onSearch from "../../../apis/Search";
 
 function SearchPage() {
+  const navigate = useNavigate();
   const [ searchData, setSearchData ] = useState();
-
-  useEffect(() => {
-    getSearch();
-  }, []);
 
   const getSearch = async () => {
     const res = await onSearch(searchData);
     if(res) {
-      window.location.assign("/result");
+      navigate('/result', {
+        state: res,
+      });
     }
   }
 
@@ -26,7 +26,7 @@ function SearchPage() {
       <S.Main>
         <S.Center>
           <State innerText="USER SEARCH" />
-          <SearchInput onGetInText={(text) => setSearchData(text)}/>
+          <SearchInput onGetInText={(text) => setSearchData(text)} onEnter={() => getSearch()} />
         </S.Center>
       </S.Main>
     </>

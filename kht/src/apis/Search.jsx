@@ -15,6 +15,7 @@ const onSearch = async ( data ) => {
         
         if(response.status == 200) {
             console.log('유저 정보 가져오기에 성공했습니다');
+            console.log(response.data);
             return response.data;
         }
     } catch (error) {
