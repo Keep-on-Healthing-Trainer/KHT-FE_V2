@@ -7,19 +7,19 @@ const RankingComponents = ( props ) => {
 
   return (
     <Ranking>
-        <Text>랭킹</Text>
+        <Text>횟수</Text>
         <SelectDiv>
             <Select>
                 <Label>윗몸일으키기</Label>
-                <Count>120위</Count>
+                <Count>{props.situp}회</Count>
             </Select>
             <Select>
                 <Label>스쿼트</Label>
-                <Count>1234위</Count>
+                <Count>{props.squat}회</Count>
             </Select>
             <Select>
                 <Label>팔굽혀펴기</Label>
-                <Count>654위</Count>
+                <Count>{props.pushup}회</Count>
             </Select>
         </SelectDiv>
     </Ranking>
