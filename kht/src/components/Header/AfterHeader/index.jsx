@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 import { breakpoints } from "../../../styles/device";
 import { color } from "../../../styles/theme";
@@ -7,12 +8,14 @@ import { color } from "../../../styles/theme";
 import Logo from "../../../assets/icon/Logo";
 
 const AfterHeader = () => {
+  const navigate = useNavigate();
+
   const onClickSearch = () => {
-    window.location.assign("/search");
+    navigate("/search");
   };
 
   const onClickHome = () => {
-    window.location.assign("/main");
+    navigate("/main");
   };
 
   return (
