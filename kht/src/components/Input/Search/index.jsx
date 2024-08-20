@@ -6,6 +6,7 @@ import { color } from "../../../styles/theme";
 import SearchIcon from "../../../assets/icon/SearchIcon";
 
 const SearchInput = (props) => {
+  const pressEnter = props.onEnter;
   const [value, setValue] = useState();
 
   const onChangeData = (e) => {
@@ -16,12 +17,19 @@ const SearchInput = (props) => {
     props.onGetInText(value);
   }, [value]);
 
+  const activeEnter = (e) => {
+    if(e.key === "Enter") {
+      pressEnter();
+    }
+  }
+
   return (
     <Container>
         <DataInput
         type="text"
         placeholder="찾고싶은 유저를 입력하세요"
         onChange={onChangeData}
+        onKeyDown={(e) => activeEnter(e)}
         />
         <SearchIcon />
     </Container>
