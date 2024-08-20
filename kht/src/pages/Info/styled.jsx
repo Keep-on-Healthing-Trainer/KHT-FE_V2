@@ -7,17 +7,17 @@ export const Main = styled.main`
   height: 94vh;
   gap: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
 export const Profile = styled.article`
-  width: 150px;
-  height: 70vh;
+  width: 1000px;
+  height: 400px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  row-gap: 15px;
+  border-bottom: solid 1px ${color.Gray[2]};
 
   @media only screen and (max-width: ${breakpoints.medium}) {
     width: 120px;
@@ -30,9 +30,14 @@ export const Profile = styled.article`
 `
 
 export const ProfileImg = styled.div`
-  width: 100px;
-  height: 100px;
-  background-color: gray;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+`
+
+export const ProfileImgSrc = styled.img`
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 `
 
@@ -49,7 +54,11 @@ export const Text = styled.div`
 `
 
 export const RightDiv = styled.div`
+  width: 1000px;
+  height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   row-gap: 50px;
 `
