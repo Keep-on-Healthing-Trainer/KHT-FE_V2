@@ -8,8 +8,9 @@ const RankingComponents = ( props ) => {
   return (
     <RankDiv>
         {props.data.map((item , index) => {
+          console.log(item.profileImgUrl);
             return(
-            <Rank key={index} rank={index+1} name={item.userName} count={item.totalCounts} onClick={props.onPress} />
+              <Rank key={index} rank={index+1} name={item.userName} count={item.totalCounts} onClick={props.onPress} path={item.profileImgUrl} />
             );
         }
         )}

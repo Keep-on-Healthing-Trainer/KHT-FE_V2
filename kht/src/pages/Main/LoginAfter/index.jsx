@@ -17,10 +17,6 @@ function LoginAfterPage() {
     getRanking();
   }, []);
 
-  const onClickRanking = () => {
-    window.location.assign("/info");
-  }
-
   const getRanking = async () => {
     const res = await onGetRank();
     if(res) {
@@ -34,7 +30,7 @@ function LoginAfterPage() {
         <S.Center>
           <State innerText="RANKING" />
           {data ? (
-            <RankingComponents data={data.RankingResponse} onPress={() => onClickRanking()}/>
+            <RankingComponents data={data.RankingResponse} />
           ) : 
             undefined
           }

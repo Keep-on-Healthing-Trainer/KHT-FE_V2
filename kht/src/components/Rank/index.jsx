@@ -9,7 +9,9 @@ const Rank = (props) => {
   return (
     <Container border={props.rank == 1 ? color.Gold : (props.rank == 2 ? color.Silver : (props.rank == 3 ? color.Copper : color.White))} onClick={props.onClick}>
       <Ranking>{props.rank}</Ranking>
-      <Profile></Profile>
+      <Profile>
+        <ProfileSrc src={props.path} />
+      </Profile>
       <TextDiv>
         <Text>{props.name}</Text>
       </TextDiv>
@@ -85,9 +87,14 @@ export const Ranking = styled.div`
 export const Profile = styled.div`
   width: 50px;
   height: 50px;
-  background-color: gray;
   border-radius: 50%;
   margin: 0px 70px;
+`;
+
+export const ProfileSrc = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 `;
 
 export default Rank;
