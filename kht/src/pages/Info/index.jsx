@@ -20,7 +20,7 @@ function InfoPage() {
       <S.Main>
         <S.Profile>
           <S.ProfileImg>
-            <S.ProfileImgSrc src={data.profileImgUrl} />
+            <S.ProfileImgSrc src={data.profileImgeUrl} />
           </S.ProfileImg>
           <S.Text>{data.name}</S.Text>
           <S.Id>{data.userId}</S.Id>

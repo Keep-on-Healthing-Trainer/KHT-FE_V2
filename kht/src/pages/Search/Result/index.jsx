@@ -50,9 +50,8 @@ function ResultPage() {
       {isData ? (
         <S.Container>
           {data.map((item, index) => {
-            console.log(item.path);
             return (
-                <DataComponents onPress={() => onClickData(item)} userId={item.userId} name={item.name} phoneNumber={item.phoneNumber} path={item.profileImgUrl} />
+                <DataComponents onPress={() => onClickData(item)} userId={item.userId} name={item.name} phoneNumber={item.phoneNumber} path={item.profileImgeUrl} />
             );
           })}
         </S.Container>
