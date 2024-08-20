@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import * as S from "./styled";
@@ -14,8 +15,10 @@ import TextComponents from "./components/Text";
 import ImageComponents from "./components/Image";
 
 function LoginBeforePage() {
+  const navigate = useNavigate();
+
   const onKHT = () => {
-    window.location.assign("/login");
+    navigate("/login");
   }
 
   return (
