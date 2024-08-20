@@ -7,11 +7,13 @@ const DataComponents = ( props ) => {
 
   return (
     <Column onClick={props.onPress}>
-        <Img></Img>
+        <Img>
+          <ImgSrc src={props.path} />
+        </Img>
         <TextDiv>
-            <BoldText>유저 이름</BoldText>
-            <Text>아이디</Text>
-            <Text>전화번호</Text>
+            <BoldText>{props.name}</BoldText>
+            <Text>{props.userId}</Text>
+            <Text>{props.phoneNumber}</Text>
         </TextDiv>
     </Column>
   );
@@ -33,7 +35,12 @@ export const Img = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: ${color.Gray[2]};
+`
+
+export const ImgSrc = styled.img`
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 `
 
 export const TextDiv = styled.div`
