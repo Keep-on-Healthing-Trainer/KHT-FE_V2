@@ -23,14 +23,10 @@ function LoginPage() {
           navigate('/main');
         }
       } catch (error) {
-        console.log("로그인 오류");
+        //console.log("로그인 오류");
       }
     }
   }
-
-  useEffect(() => {
-    console.log(loginData);
-  }, [loginData]);
 
   return (
     <>

@@ -11,10 +11,6 @@ function InfoPage() {
   const location = useLocation();
   const data = location.state;
 
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
   return (
     <>
       <S.Main>
